@@ -1,3 +1,5 @@
+Index,Date,Time,TimeOfDay,Demand,Price,MaxTemp,MinTemp,Rainfall
+1,1/01/2000,2:30,Midnight,3280.89333,17.5,27,21,0.01
 2,1/01/2000,5:30,Early Morning,3280.89333,17.5,27,21,0.01
 3,1/01/2000,8:30,Morning,3801.56833,17.46,27,21,0.01
 4,1/01/2000,11:30,Midday,4185.38833,18.56,27,21,0.01

@@ -1,3 +1,5 @@
+Index,Date,Time,TimeOfDay,Demand,MaxTemp,MinTemp,Rainfall
+1,1/04/2018,2:30,Midnight,5384.68,28.9,20.1,0.01
 2,1/04/2018,5:30,Early Morning,5384.68,28.9,20.1,0.01
 3,1/04/2018,8:30,Morning,5678.77,28.9,20.1,0.01
 4,1/04/2018,11:30,Midday,5749,28.9,20.1,0.01
