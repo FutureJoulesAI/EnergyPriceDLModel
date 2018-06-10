@@ -80,3 +80,16 @@ def train_model(lrnRate, trainDataFile, testDataFile):
 
     return m
 
+def predict_single_dataPoint(m, data):
+    
+    cat = data[cat_vars].values.astype(np.int64)[None]
+    contin = data.drop(cat_vars).values.astype(np.float32)[None]
+
+    model = m.model
+    model.eval()
+    prediction = to_np(model(V(cat), V(contin)))
+    price = np.exp(prediction)
+
+    return price
+
+
