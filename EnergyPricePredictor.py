@@ -18,7 +18,7 @@ def exp_rmspe(y_pred, targ):
     pct_var = (targ - inv_y(y_pred))/targ
     return math.sqrt((pct_var**2).mean())
 
-def train_model(lrnRate, trainDataFile, testDataFile):
+def train_model(lrnRate, trainDataFile, testDataFile, cat_vars, contin_vars):
 
     PATH="//home/ubuntu/fastai/courses/data/EnergyPriceDLModel/"
     data_Train = pd.read_csv(f'{PATH}'+trainDataFile, parse_dates=['Date'])    
@@ -41,8 +41,8 @@ def train_model(lrnRate, trainDataFile, testDataFile):
     data_Test["Date"] = pd.to_datetime(data_Test.Date)
 
     #Catorgorise Variables and apply to data
-    cat_vars = ['Date', 'Time','TimeOfDay','Year', 'Month', 'Week', 'Day', 'Dayofweek', 'Dayofyear']
-    contin_vars = ['Demand']
+    ##cat_vars = ['Date', 'Time','TimeOfDay','Year', 'Month', 'Week', 'Day', 'Dayofweek', 'Dayofyear']
+    ##contin_vars = ['Demand']
     dep = 'Price'
     data_Train = data_Train[cat_vars+contin_vars+[dep, 'Index']].copy()   
     data_Test[dep] = 0
@@ -80,10 +80,10 @@ def train_model(lrnRate, trainDataFile, testDataFile):
 
     return m
 
-def predict_single_dataPoint(m, data):
+def predict_single_dataPoint(m, data, catVars):
     
-    cat = data[cat_vars].values.astype(np.int64)[None]
-    contin = data.drop(cat_vars).values.astype(np.float32)[None]
+    cat = data[catVars].values.astype(np.int64)[None]
+    contin = data.drop(catVars).values.astype(np.float32)[None]
 
     model = m.model
     model.eval()
