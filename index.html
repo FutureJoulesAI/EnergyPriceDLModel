@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Energy Price Predictor</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div id="main_image" style="width:100%; overflow-y:scroll;">
+        <div class="container">
+            <form id="priceEntry" action="" method="post">                
+                <h3 style="text-align:center">Prediction Day Details</h3>
+                <fieldset>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <strong>Date:</strong>
+                            </div>
+                            <div class="col-sm-6">
+                                <input id="dateDetails" style="float:right; align-self:center" placeholder="dd/mm/yyyy" type="text" tabindex="1" required autofocus />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <strong>Time:</strong>
+                            </div>
+                            <div class="col-sm-6">
+                                <input id="timeDetails" style="float:right;" placeholder="hh:mm" type="text" tabindex="2" required autofocus />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <strong>Demand:</strong>
+                            </div>
+                            <div class="col-sm-6">
+                                <input id="demandValue" style="float:right;" placeholder="Demand Value" type="text" tabindex="3" required autofocus />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <strong>Max Temp:</strong>
+                            </div>
+                            <div class="col-sm-6">
+                                <input id="maxTempValue" style="float:right;" placeholder="Predicted Max Temp" type="text" tabindex="5" required autofocus />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <strong>Min Temp:</strong>
+                            </div>
+                            <div class="col-sm-6">
+                                <input id="minTempValue" style="float:right;" placeholder="Predicted Min Temp" type="text" tabindex="5" required autofocus />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <strong>Rainfall:</strong>
+                            </div>
+                            <div class="col-sm-6">
+                                <input id="rainfallValue" style="float:right;" placeholder="Predicted Rainfall" type="text" tabindex="6" required autofocus />
+                            </div>
+                        </div>                        
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <button name="submit" type="button" id="priceEntry-submit" data-submit="...Sending">Submit</button>
+                </fieldset>
+                <fieldset>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <strong>Predicted Price:</strong>
+                            </div>
+                            <div class="col-sm-6">
+                                <input id="priceValue" style="float:right;" placeholder="Predicted Energy Price" type="text" disabled="disabled" />
+                            </div>
+                        </div>
+                    </div>                    
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
