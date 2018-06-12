@@ -1,3 +1,4 @@
+Index,Date,Time,TimeOfDay,Demand,DemandMAV,Price,PriceMAV,MaxTemp,MinTemp,Rainfall
 1440,1/01/2018,0:00,Midnight,6210.63,6495.598,0,0,32.1,24.2,0.4
 1441,1/01/2018,0:30,Midnight,6030.84,6495.768,0,0,32.1,24.2,0.4
 1442,1/01/2018,1:00,Midnight,5931.49,6495.933,0,0,32.1,24.2,0.4
